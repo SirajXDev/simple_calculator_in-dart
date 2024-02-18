@@ -1,0 +1,32 @@
+Dart code for simple calculator
+import 'dart:io';
+//simple calculator
+void main() {
+    bool continueCalculating=true;
+    while(continueCalculating){
+
+    
+  print('Enter ist number');
+  double a = double.parse(stdin.readLineSync()!);
+  print('enter 2nd number');
+  double b = double.parse(stdin.readLineSync()!);
+  print('Enter operation(+,-,*,/):');
+  String operation = stdin.readLineSync()!;
+  double result = 0;
+  if (operation == '+') {
+    result = a + b;
+  } else if (operation == '-') {
+    result = a - b;
+  } else if (operation == '*') {
+    result = a * b;
+  } else if (operation == '/') {
+    result = a / b;
+  } else {
+    print('invalid number');
+    continue;
+  }
+  print('result is ${result}');
+  
+
+    }
+}
